@@ -38,6 +38,9 @@ namespace Tween
                 switch (tabID)
                 {
                     case 0:
+                        if (refTarget.UpdateTweens == null)
+                            break;
+
                         for (int i = 0; i < refTarget.UpdateTweens.Length; i++)
                         {
                             if (refTarget.UpdateTweens[i] != null)
@@ -50,8 +53,12 @@ namespace Tween
                                 }
                             }
                         }
+
                         break;
                     case 1:
+                        if (refTarget.FixedTweens == null)
+                            break;
+
                         for (int i = 0; i < refTarget.FixedTweens.Length; i++)
                         {
                             if (refTarget.FixedTweens[i] != null)
@@ -64,8 +71,12 @@ namespace Tween
                                 }
                             }
                         }
+
                         break;
                     case 2:
+                        if (refTarget.LateTweens == null)
+                            break;
+
                         for (int i = 0; i < refTarget.LateTweens.Length; i++)
                         {
                             if (refTarget.LateTweens[i] != null)
@@ -78,6 +89,7 @@ namespace Tween
                                 }
                             }
                         }
+
                         break;
                 }
 
